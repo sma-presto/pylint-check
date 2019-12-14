@@ -1,6 +1,7 @@
 // Checks API example
 // See: https://developer.github.com/v3/checks/ to learn more
-
+const Octokit = require("@octokit/rest");
+const octokit = new Octokit();
 var path = require('path')
 var Git = require('nodegit')
 var fs = require('fs')
@@ -10,6 +11,7 @@ const cprocess = require('child_process')
 var rimraf = require('rimraf')
 const gdict = {}
 //console.log(process.env.POSMON_PUB_KEY)
+
 module.exports = app => {
   app.on(['check_suite.requested', 'check_suite.rerequested',
     'check_run.created',
@@ -19,7 +21,24 @@ module.exports = app => {
   const APP_CHECK_NAME = 'PEP8 checks'
   var headBranch = null
   var headSha = null
+  app.log('env ' + util.inspect(process.env))
+
+
   async function check (context) {
+    //var listPRs = context.github.pulls.list({
+    //  owner: 'Elacarte',
+    //  repo: 'ELCPosmon',
+    //  state: 'open',
+    //  head: 'Elacarte:PINTGR-849'
+    //})
+
+    //await listPRs.then(function (PRs) {
+    //    app.log('pull request eg: ' + util.inspect(PRs))
+    //    app.log('pull request eg: ' + util.inspect(PRs.data[0].user))
+    //    app.log('pull request eg: ' + util.inspect(PRs.data[0].head))
+    //    app.log('pull request eg: ' + util.inspect(PRs.data[0].base))
+    //})
+    //app.log('here')
     app.log('case statement ' + context.event + '.' + context.payload.action)
     switch (context.event + '.' + context.payload.action) {
       case 'pull_request.closed':
@@ -32,17 +51,20 @@ module.exports = app => {
         break
       case 'check_suite.requested':
       case 'check_suite.rerequested':
-        if (context.payload.check_suite.head_commit.author.name ===
-            'sma-presto') {
-          if (!(context.payload.check_suite.id in gdict)) {
-            gdict[context.payload.check_suite.id] = 0
-          }
-          createCheckRun(context, context.payload.check_suite)
+        var users = process.env.POSMON_PYLINT_USERS.split(' ')
+        app.log("users " + util.inspect(users) + " " + 
+            context.payload.check_suite.head_commit.author.email)
+        if (users.indexOf(
+          context.payload.check_suite.head_commit.author.email) >= 0) {
+            app.log('gdict ' + util.inspect(gdict))
+            if (!(context.payload.check_suite.id in gdict)) {
+                gdict[context.payload.check_suite.id] = 0
+            }
+            createCheckRun(context, context.payload.check_suite)
         }
         break
       case 'check_run.created':
-        if (context.payload.check_run.check_suite.id in gdict)
-        {
+        if (context.payload.check_run.check_suite.id in gdict) {
           initCheckRun(context, context.payload.check_run)
           executeCheckRun(context, context.payload.check_run)
         }
@@ -147,8 +169,25 @@ module.exports = app => {
         }
       }
     }
-    var issueNumber = context.payload.check_run.
-      check_suite.pull_requests[0].number
+    
+
+    var issueNumber = null
+    if (context.payload.check_run.check_suite.pull_requests.length == 0) {
+        var listPRs = context.github.pulls.list({
+          owner: repoOwner,
+          repo: repoName,
+          state: 'open',
+          head: repoOwner+':'+headBranch
+        })
+
+        await listPRs.then(function (PRs) {
+            app.log('pull request eg: ' + util.inspect(PRs))
+            issueNumber = PRs.data[0].number
+        })
+    } else {
+        issueNumber = context.payload.check_run.
+          check_suite.pull_requests[0].number
+    }
     app.log('middle execute_check_run ' + cloneURL + ' | ' +
       localPath + ' | ' + headBranch + ' | ' +
       context.payload.check_run.check_suite.head_branch + ' | ' +
@@ -208,8 +247,7 @@ module.exports = app => {
 
       var foundComment = false
       listComments.then(function (comments) {
-        app.log('list comments ' + util.inspect(comments) +
-          ' AA ' + util.inspect(comments.data[0].user))
+        app.log('list comments ' + util.inspect(comments))
         for (let idx = 0; idx < comments.data.length; idx++) {
           app.log('login ' + util.inspect(comments.data[idx]))
           if (comments.data[idx].user.login === 'lint-check[bot]') {

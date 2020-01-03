@@ -172,7 +172,7 @@ module.exports = app => {
     
 
     var issueNumber = null
-    if (context.payload.check_run.check_suite.pull_requests.length == 0) {
+    if (context.payload.check_run.check_suite.pull_requests.length === 0) {
         var listPRs = context.github.pulls.list({
           owner: repoOwner,
           repo: repoName,
@@ -180,7 +180,7 @@ module.exports = app => {
           head: repoOwner+':'+headBranch
         })
 
-        await listPRs.then(function (PRs) {
+        listPRs.then(function (PRs) {
             app.log('pull request eg: ' + util.inspect(PRs))
             issueNumber = PRs.data[0].number
         })

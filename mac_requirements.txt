@@ -1,0 +1,14 @@
+netifaces==0.10.6
+jinja2==2.6
+lxml==3.3.5
+psutil==1.2.1
+pysqlite==2.6.3
+pillow==4.2.1
+pyOpenSSL==19
+pyzmq==14.3.1
+comtypes==1.1.7
+pyodbc==4.0.27
+pytest-cov==1.8.1
+coverage==3.7.1
+pyYAML==3.11
+pyfakefs==3.6

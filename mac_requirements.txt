@@ -10,5 +10,5 @@ comtypes==1.1.7
 pyodbc==4.0.27
 pytest-cov==1.8.1
 coverage==3.7.1
-pyYAML==3.11
+pyYAML==5.1
 pyfakefs==3.6

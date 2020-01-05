@@ -1,0 +1,68 @@
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/argh-0.26.1-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/argparse-1.4.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/automaton-1.1.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/boto-2.6.0-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/colorama-0.3.5-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/configobj-4.7.2-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/cov_core-1.15.0-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/cookies-2.2.1-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/dbf-0.95.4-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/decorator-3.4.0-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/ecdsa-0.13-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/extras-0.0.3-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/Fabric-1.9.0-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/fixtures-1.4.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/freezegun-0.3.7-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/functools32-3.2.3.post2-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/funcsigs-1.0.2-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/Jinja2-2.6-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/jsonschema-2.5.1-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/linecache2-1.0.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/mock-2.0.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/mox3-0.13.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/nose-1.3.3-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/Padding-0.4-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/paramiko-1.16.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/pathtools-0.1.2-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/pbr-3.0.1-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/portalocker-0.3-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/prettytable-0.7.2-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/py-1.4.31-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/pyfakefs-2.6.zip
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/pyfakefs-2.7-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/pytest-2.6.3-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/python_dateutil-2.1-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/python_mimeparse-1.5.1-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/raven-1.6.1-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/requests-2.11.1-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/responses-0.5.1-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/simplejson-3.8.0-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/six-1.10.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/SQLAlchemy-0.9.8-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/suds-master-0.4.1.zip
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/testfixtures-4.12.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/testtools-1.9.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/tinyrpc-0.5-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/traceback2-1.4.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/unittest2-1.1.0-py2.py3-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/watchdog-0.8.3-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/httplib2-0.9.2-py2-none-any.whl
+https://posmon_redistributable_sw.s3.amazonaws.com/posmon_requirements/pytz-2016.10-py2.py3-none-any.whl
+codecov
+
+###############################################
+# Some dependencies break the Windows
+# bootstrapping and must be manually installed
+# on Linux/Mac.
+# For windows read and run win_requirements.bat
+# For Linux run unix_requirements.txt
+# For Mac, run mac_requirements.txt
+###############################################
+
+# pycrypto and pysqlite may need an external compiler such as mingw.
+# install mingw (or other compiler)
+# add mingw\bin to path
+# Edit (create if not existing) distutils.cfg file located at C:\Python27\Lib\distutils\distutils.cfg to be:
+# [build]
+# compiler=mingw32
+

@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "nodegit": "^0.26.2",
-    "probot": "^9.5.3",
+    "probot": "^12.2.8",
     "rimraf": "^3.0.0"
   },
   "devDependencies": {
